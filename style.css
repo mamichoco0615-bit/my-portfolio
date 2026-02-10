@@ -132,6 +132,7 @@ body::after {
     border-radius: 12px;
     background: rgba(255, 255, 255, .35);
     box-shadow: 0 6px 18px rgba(70, 40, 35, .06);
+  
 }
 
 .navToggle span {
@@ -141,6 +142,19 @@ body::after {
     background: rgba(94, 75, 70, .8);
     margin: 6px auto;
     transition: transform .25s ease, opacity .25s ease;
+}
+
+/* *=====hamburger ->X=====*/
+ .navToggle.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.navToggle.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.navToggle.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
 }
 
 /* ===== layout ===== */

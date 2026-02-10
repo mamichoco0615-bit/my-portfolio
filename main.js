@@ -6,28 +6,36 @@ const toggle = document.querySelector(".navToggle");
 const nav = document.querySelector(".nav");
 
 if (toggle && nav) {
+    const closeMenu = () => {
+        nav.classList.remove("is-open");
+        toggle.classList.remove("is-open");
+        toggle.setAttribute("aria-expanded", "false");
+    };
+
     toggle.addEventListener("click", () => {
         const opened = nav.classList.toggle("is-open");
-        toggle.setAttribute("aria-expanded", String(opened));
-        // アイコンっぽく（簡易）
         toggle.classList.toggle("is-open", opened);
+        toggle.setAttribute("aria-expanded", String(opened));
     });
 
-    // メニュークリックで閉じる
     nav.querySelectorAll("a").forEach(a => {
-        a.addEventListener("click", () => {
-            nav.classList.remove("is-open");
-            toggle.setAttribute("aria-expanded", "false");
-            toggle.classList.remove("is-open");
-        });
+        a.addEventListener("click", closeMenu);
     });
 
-    // 外側クリックで閉じる
     document.addEventListener("click", (e) => {
         if (!nav.contains(e.target) && !toggle.contains(e.target)) {
-            nav.classList.remove("is-open");
-            toggle.setAttribute("aria-expanded", "false");
-            toggle.classList.remove("is-open");
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") closeMenu();
+    });
+
+    /* 👇 これが追加ポイント */
+    window.addEventListener("scroll", () => {
+        if (nav.classList.contains("is-open")) {
+            closeMenu();
         }
     });
 }
