@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MAMI UEHARA | Portfolio</title>
+  <meta name="description" content="シンプルで心地よいWebサイトをつくります。" />
+
+  <!-- Font（近い雰囲気：細め＆上品） -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="header__inner">
+      <a class="brand" href="#home" aria-label="home">HOME</a>
+
+      <button class="navToggle" type="button" aria-label="menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" aria-label="global">
+        <ul class="nav__list">
+          <!-- <li><a href="#home">HOME</a></li> -->
+          <li><a href="#about">ABOUT</a></li>
+          <li><a href="#works">WORKS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== Main ===== -->
+  <main>
+    <!-- ===== Home ===== -->
+    <section id="home" class="section hero">
+      <div class="container hero__inner">
+        <!-- <p class="sectionNo">1. HOME</p> -->
+
+        <h1 class="hero__title">MAMI UEHARA</h1>
+        <p class="hero__sub">Web Designer &amp; Coder</p>
+        <p class="hero__lead">シンプルで心地よいWebサイトをつくります。</p>
+
+        <a class="scrollHint" href="#about" aria-label="scroll to about">
+          <span>Scroll</span>
+          <i class="chev" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="sectionNo">1. ABOUT</p>
+
+        <div class="card reveal">
+          <h2 class="card__title">ABOUT ME</h2>
+          <div class="divider"></div>
+
+          <p class="card__text">
+            はじめまして、MAMIと申します。<br>
+            これまで長く美容師として働き、
+            お客様一人ひとりの「なりたいイメージ」や
+            言葉にしづらい感覚をくみ取ることを大切にしてきました。<br>
+            見る人が安心できること、伝えたい想いがきちんと届くことを意識して
+            サイト制作に取り組んでいます。<br>
+            AB型・MBTIは建築家タイプ。
+            全体の構成を考えることや、
+            細部を整えて世界観をつくる作業が得意です。<br>
+            猫が好きで、西表島の自然の中で育ったこともあり、
+            やさしく、余白を大切にしたデザインや
+            落ち着いた雰囲気の表現を好んでいます。<br>
+            「相談しやすく、丁寧に向き合ってくれる制作者」をお探しの方に
+            安心して任せていただけるよう、
+            一つひとつのご依頼に真摯に取り組みます。
+          </p>
+
+          <div class="chips">
+            <div class="chip">
+              <span class="chip__icon" aria-hidden="true">🐱</span>
+              <span>猫が好き</span>
+            </div>
+            <div class="chip">
+              <span class="chip__icon" aria-hidden="true">☕</span>
+              <span>カフェ巡り</span>
+            </div>
+            <div class="chip">
+              <span class="chip__icon" aria-hidden="true">🍰</span>
+              <span>スイーツ好き</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section id="skills" class="section">
+      <div class="container">
+        <p class="sectionNo">3. SKILLS</p>
+
+        <div class="card reveal">
+          <h2 class="card__title">MY SKILLS</h2>
+          <div class="divider"></div>
+
+          <ul class="list">
+            <li>HTML / SCSS / JavaScript</li>
+            <li>レスポンシブ対応</li>
+            <li>Webアニメーション</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Works ===== -->
+    <section id="works" class="section">
+      <div class="container">
+        <p class="sectionNo">4. WORKS</p>
+
+        <div class="card reveal">
+          <h2 class="card__title">MY WORKS</h2>
+          <div class="divider"></div>
+
+          <div class="worksGrid">
+            <!-- 画像は差し替え：img/work1.jpg など -->
+            <a class="work" href="https://mamichoco0615-bit.github.io/catcafe-sakura/" target="_blank" rel="noopener">
+              <img src="img/work1.png" alt="WORK 1">
+              <span class="work__label">猫カフェさくら(架空)</span>
+            </a>
+            <a class="work" href="https://satoushio777.github.io/hackathon3-team404Meow-Found/" target="_blank"
+              rel="noopener">
+              <img src="img/work2.png" alt="WORK 2">
+              <span class="work__label">PRONAVI(架空)</span>
+            </a>
+            <a class="work" href="#" target="_blank" rel="noopener">
+
+              <img src="https://placehold.co/420x280/png?text=WORK+3" alt="WORK 3">
+              <span class="work__label">西表島の民宿サイト（架空）</span>
+            </a>
+            <a class="work" href="#" target="_blank" rel="noopener">
+              <img src="https://placehold.co/420x280/png?text=WORK+4" alt="WORK 4">
+              <span class="work__label">WORK 4</span>
+            </a>
+          </div>
+
+          <div class="center">
+            <a class="btn btn--primary" href="works.html" aria-label="works list">WORKS 一覧へ →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section id="contact" class="section">
+      <div class="container">
+        <p class="sectionNo">5. CONTACT</p>
+
+        <div class="card reveal">
+          <form class="form" action="#" method="post">
+            <label class="field">
+              <span class="field__label">お名前</span>
+              <input type="text" name="name" autocomplete="name" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">メールアドレス</span>
+              <input type="email" name="email" autocomplete="email" required />
+            </label>
+
+            <label class="field">
+              <span class="field__label">メッセージ</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+
+            <div class="center">
+              <button class="btn btn--primary" type="submit">送信</button>
+            </div>
+          </form>
+
+          <p class="note">
+            ※実運用するならフォームは Formspree / Netlify Forms / Google Forms などにつなげるのが簡単だよ。
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>© <span id="year"></span> MAMI UEHARA</small>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
