@@ -163,20 +163,22 @@
         <p class="sectionNo">5. CONTACT</p>
 
         <div class="card reveal">
-          <form class="form" action="#" method="post">
+          <form class="form"
+            action="https://docs.google.com/forms/d/1ZHvFCMK4FBOUNJZMt7SrUa_nLRkRpnoVoh1YFkooIoY/formResponse"
+            method="POST" target="hidden_iframe" onsubmit="return handleSubmit();">
             <label class="field">
               <span class="field__label">お名前</span>
-              <input type="text" name="name" autocomplete="name" required />
+              <input type="text" name="entry.1302780156" autocomplete="name" required />
             </label>
 
             <label class="field">
               <span class="field__label">メールアドレス</span>
-              <input type="email" name="email" autocomplete="email" required />
+              <input type="email" name="entry.1376431684" autocomplete="email" required />
             </label>
 
             <label class="field">
               <span class="field__label">メッセージ</span>
-              <textarea name="message" rows="5" required></textarea>
+              <textarea name="entry.1292079891" rows="5" required></textarea>
             </label>
 
             <div class="center">
@@ -184,9 +186,14 @@
             </div>
           </form>
 
-          <p class="note">
-            ※実運用するならフォームは Formspree / Netlify Forms / Google Forms などにつなげるのが簡単だよ。
+          <!-- 送信完了メッセージ（formの外！） -->
+          <p class="form-thanks" id="formThanks" hidden>
+            送信完了しました。<br />
+            お問い合わせありがとうございます。
           </p>
+
+          <!-- iframe（formの外！） -->
+          <iframe name="hidden_iframe" style="display:none;"></iframe>
         </div>
       </div>
     </section>
@@ -197,6 +204,21 @@
   </footer>
 
   <script src="main.js"></script>
+
+  <script>
+    function handleSubmit() {
+      const form = document.querySelector('.form');
+      const thanks = document.getElementById('formThanks');
+
+      // フォーム非表示
+      form.style.display = 'none';
+
+      // 完了メッセージ表示
+      thanks.hidden = false;
+
+      return true; // ← これ超重要（Googleフォームに送信する）
+    }
+  </script>
 </body>
 
 </html>
